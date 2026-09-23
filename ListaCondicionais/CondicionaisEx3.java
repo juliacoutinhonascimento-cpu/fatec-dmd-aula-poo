@@ -13,6 +13,6 @@ public class CondicionaisEx3 {
              System.out.println("Você não é maior de idade.");
          }
 
-         sc.close();
+     sc.close();
     }
 }
