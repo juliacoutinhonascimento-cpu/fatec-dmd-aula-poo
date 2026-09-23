@@ -14,7 +14,7 @@ public class CondicionaisEx1 {
         } else {
             System.out.println("Número Igual a 0");
         }
-            
-        sc.close();
+        
+     sc.close();
     }
 }
