@@ -3,12 +3,12 @@ import java.util.Scanner;
 public class CondicionaisEx7 {
 
     public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Digite a primeira nota: ");
-        int nota1 = scanner.nextInt();
+        int nota1 = sc.nextInt();
 
         System.out.println("Digite a segunda nota: ");
-        int nota2 = scanner.nextInt();
+        int nota2 = sc.nextInt();
 
         int media = (nota1 + nota2) / 2;
 
@@ -24,6 +24,6 @@ public class CondicionaisEx7 {
             System.out.println("Reprovado");
 
         }
-    scanner.close();
+    sc.close();
     }
 }
