@@ -5,7 +5,9 @@ public class MetodoFuncaoEx3 {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite um número: ");
-        return sc.nextInt();
+       return sc.nextInt();
+     
+
     }
 
     public static String ehPar(){
@@ -25,8 +27,7 @@ public class MetodoFuncaoEx3 {
     public static void main(String[] args) {
         String resultado = ehPar();
         mostrarResultado(resultado);
-    }
-
-
+        
+    } 
 
 }
