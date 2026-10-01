@@ -5,6 +5,7 @@ public class MetodoFuncaoEx3 {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite um número: ");
+        sc.close();
        return sc.nextInt();
      
 
