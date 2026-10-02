@@ -3,6 +3,7 @@ public class MetodoFuncaoEx4 {
 
     public static double lerNota(){
         
+        @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
         
             System.out.println("Digite a nota: ");
