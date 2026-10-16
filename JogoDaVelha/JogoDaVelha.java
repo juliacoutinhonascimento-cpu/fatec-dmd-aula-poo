@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ExJogoDaVelha {
+public class JogoDaVelha {
    static Scanner entrada = new Scanner(System.in);
 
     static char[][] tabuleiro = new char[3][3];
@@ -63,7 +63,7 @@ public static void exibirTabuleiro(){
 
         break;
     }
-    
+ }
 
     public static boolean posicaoValida(int linha, int coluna){
 
@@ -82,21 +82,20 @@ public static void exibirTabuleiro(){
         }
 
         for (int coluna = 0; coluna < 3; coluna++){
-            
-         if (tabuleiro[0][coluna] == jogador && tabuleiro[1][coluna] == jogador && tabuleiro[2][coluna] == jogador){
-                jogador = 'x';
+            if (tabuleiro[0][coluna] == jogador && tabuleiro[1][coluna] == jogador && tabuleiro[2][coluna] == jogador){
                 return true;
             }
-
-         if(tabuleiro[0][2] == jogador && tabuleiro[1][1] == jogador && tabuleiro[2][0] == jogador){
-                jogador = 'x';
-                return true;
-            }
-            
-            return false;
-
         }
 
-    
+        if (tabuleiro[0][0] == jogador && tabuleiro[1][1] == jogador && tabuleiro[2][2] == jogador){
+            return true;
+        }
+
+        if (tabuleiro[0][2] == jogador && tabuleiro[1][1] == jogador && tabuleiro[2][0] == jogador){
+            return true;
+        }
+
+        return false;
   }
+  
 }
