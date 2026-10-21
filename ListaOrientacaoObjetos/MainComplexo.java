@@ -1,4 +1,3 @@
-package br.edu.sp.cps.fatec.barueri.dmd.aula7;
 
 public class MainComplexo {
 
