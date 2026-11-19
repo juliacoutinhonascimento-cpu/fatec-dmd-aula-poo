@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class MetodoFuncaoEx3 {
+public class Ex3 {
 
     public static int lerNumero(){
 

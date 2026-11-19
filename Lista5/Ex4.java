@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class MetodoFuncaoEx4 {
+public class Ex4 {
 
     public static double lerNota(){
         
