@@ -1,5 +1,5 @@
  import java.util.Scanner;
-public class ArrayEx2 {
+public class Ex2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int[] linha = new int [10];
