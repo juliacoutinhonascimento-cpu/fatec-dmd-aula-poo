@@ -15,12 +15,13 @@ public class Ex8 {
         int x = scan.nextInt();
 
         for (int i = 0; i < valores.length; i++) {
-            if (valores[i] == x) count++;
-            
+            if (valores[i] == x) {
+                count++;
             }
         }
 
         System.out.println(count);
         scan.close();
+    }
 }
 
