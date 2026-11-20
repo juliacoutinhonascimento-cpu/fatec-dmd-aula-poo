@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class CondicionaisEx8 {
+public class Ex8 {
 
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
