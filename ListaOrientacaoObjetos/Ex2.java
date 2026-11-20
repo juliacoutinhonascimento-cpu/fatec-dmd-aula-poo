@@ -1,28 +1,28 @@
 
-public class Ponto2D {
+public class Ex2 {
     private double x;
     private double y;
 
-    // a) Ponto na origem (0,0)
+    
 
-    public Ponto2D() {
+    public Ex2() {
         x = 0;
         y = 0;
     }
 
-    // a) Construtor com os valores de x e y
-    public Ponto2D(double x, double y) {
+   
+    public Ex2(double x, double y) {
         this.x = x;
         this.y = y;
     }
 
-    // a) Construtor que recebe outro ponto
-    public Ponto2D(Ponto2D ponto) {
+  
+    public Ex2(Ex2 ponto) {
         this.x = ponto.x;
         this.y = ponto.y;
     }
 
-    // b) Getters e setters
+    
     public double getX() {
         return x;
     }
@@ -39,41 +39,41 @@ public class Ponto2D {
         this.y = y;
     }
 
-    // c) Movimentar para a origem
+  
     public void mover() {
         x = 0;
         y = 0;
     }
 
-    // c) Movimentar usando x e y
+    
     public void mover(double x, double y) {
         this.x = x;
         this.y = y;
     }
 
-    // c) Movimentar para a posição de outro ponto
-    public void mover(Ponto2D ponto) {
+   
+    public void mover(Ex2 ponto) {
         this.x = ponto.x;
         this.y = ponto.y;
     }
 
-    // d) Comparar dois pontos
+   
     public boolean equals(Object objeto) {
-        if (objeto instanceof Ponto2D) {
-            Ponto2D ponto = (Ponto2D) objeto;
+        if (objeto instanceof Ex2) {
+            Ex2 ponto = (Ex2) objeto;
             return x == ponto.x && y == ponto.y;
         }
 
         return false;
     }
 
-    // e) Representar o ponto como String
+    
     public String toString() {
         return "(" + x + ", " + y + ")";
     }
 
-    // Calcular a distância até outro ponto
-    public double distancia(Ponto2D ponto) {
+    
+    public double distancia(Ex2 ponto) {
         double diferencaX = x - ponto.x;
         double diferencaY = y - ponto.y;
 
@@ -82,8 +82,8 @@ public class Ponto2D {
         );
     }
 
-    // f) Criar uma cópia do ponto
-    public Ponto2D clone() {
-        return new Ponto2D(x, y);
+   
+    public Ex2 clone() {
+        return new Ex2 (x, y);
     }
 }

@@ -1,10 +1,10 @@
-public class Matrizes {
+public class Ex11 {
 
     private int linhas;
     private int colunas;
     private int[][] elementos;
 
-    public Matrizes(int linhas, int colunas) {
+    public Ex11(int linhas, int colunas) {
         if (linhas <= 0 || colunas <= 0) {
             throw new IllegalArgumentException(
                 "As dimensoes devem ser positivas."
@@ -37,11 +37,11 @@ public class Matrizes {
             return true;
         }
 
-        if (!(objeto instanceof Matrizes)) {
+        if (!(objeto instanceof Ex11)) {
             return false;
         }
 
-         Matrizes outra = (Matrizes) objeto;
+         Ex11 outra = (Ex11) objeto;
 
          if (linhas != outra.linhas || colunas != outra.colunas) {
             return false;
@@ -74,8 +74,8 @@ public class Matrizes {
         return resultado;
     }
         
-    public Matrizes Transposta() {
-        Matrizes resultado = new Matrizes(colunas, linhas);
+    public Ex11 Transposta() {
+        Ex11 resultado = new Ex11(colunas, linhas);
 
         for (int i = 0; i < linhas; i++) {
             for (int j = 0; j < colunas; j++) {
@@ -86,8 +86,8 @@ public class Matrizes {
         return resultado;
     }
 
-    public Matrizes Oposta() {
-        Matrizes resultado = new Matrizes(linhas, colunas);
+    public Ex11 Oposta() {
+        Ex11 resultado = new Ex11(linhas, colunas);
 
         for (int i = 0; i < linhas; i++) {
             for (int j = 0; j < colunas; j++) {
@@ -98,8 +98,8 @@ public class Matrizes {
         return resultado;
     }
 
-    public Matrizes gerarMatrizNula() {
-        return new Matrizes(linhas, colunas);
+    public Ex11 gerarMatrizNula() {
+        return new Ex11(linhas, colunas);
     }
 
     public boolean Identidade() {
@@ -186,7 +186,7 @@ public class Matrizes {
         return true;
     }
 
-    public void adicionar(Matrizes outra) {
+    public void adicionar(Ex11 outra) {
         if (linhas != outra.linhas || colunas != outra.colunas) {
             throw new IllegalArgumentException(
                 "As matrizes devem ter as mesmas dimensoes."
@@ -200,7 +200,7 @@ public class Matrizes {
         }
     }
 
-    public void subtrair(Matrizes outra) {
+    public void subtrair(Ex11 outra) {
         if (linhas != outra.linhas || colunas != outra.colunas) {
             throw new IllegalArgumentException(
                 "As matrizes devem ter as mesmas dimensoes."
@@ -214,14 +214,14 @@ public class Matrizes {
         }
     }
 
-    public void multiplicar(Matrizes outra) {
+    public void multiplicar(Ex11 outra) {
         if (colunas != outra.linhas) {
             throw new IllegalArgumentException( "O numero de colunas da primeira matriz deve ser "
                 + "igual ao numero de linhas da segunda."
             );
         }
 
-       Matrizes resultado = new Matrizes(linhas, outra.colunas);
+       Ex11 resultado = new Ex11(linhas, outra.colunas);
 
         for (int i = 0; i < linhas; i++) {
             for (int j = 0; j < outra.colunas; j++) {
@@ -237,8 +237,8 @@ public class Matrizes {
         elementos = resultado.elementos;
     }
 
-    public Matrizes copiar() {
-        Matrizes copia = new Matrizes(linhas, colunas);
+    public Ex11 copiar() {
+        Ex11 copia = new Ex11(linhas, colunas);
 
         for (int i = 0; i < linhas; i++) {
             for (int j = 0; j < colunas; j++) {

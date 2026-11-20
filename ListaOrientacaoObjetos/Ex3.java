@@ -1,9 +1,9 @@
-public class NumerosComplexos {
+public class Ex3 {
 	
 	private double numreal;
 	private double numimaginario;
 	
-	public NumerosComplexos(double numreal, double numimaginario) {
+	public Ex3(double numreal, double numimaginario) {
 		
 		this.setNumreal(numreal);
 		this.setNumimaginario(numimaginario);
@@ -26,34 +26,34 @@ public class NumerosComplexos {
 		this.numimaginario = numimaginario;
 	}
 	
-	public NumerosComplexos Soma(NumerosComplexos outro) {
-            return new NumerosComplexos(
+	public Ex3 Soma(Ex3 outro) {
+            return new Ex3(
                 this.numreal + outro.numreal,
                 this.numimaginario + outro.numimaginario
             );
 
     }
 
-	public NumerosComplexos Subtracao(NumerosComplexos outro) {
-			return new NumerosComplexos(
+	public Ex3 Subtracao(Ex3 outro) {
+			return new Ex3(
 				this.numreal - outro.numreal,
 				this.numimaginario - outro.numimaginario
 			);
 
 	}
 
-	public NumerosComplexos Multiplicacao(NumerosComplexos outro) {
+	public Ex3 Multiplicacao(Ex3 outro) {
 		
 			double novonumnumreal = this.numreal * outro.numreal
                         - this.numimaginario * outro.numimaginario;
 
 			double novonumnumimaginario = this.numreal * outro.numimaginario
                         + this.numimaginario * outro.numreal;
-        return new NumerosComplexos(novonumnumreal,novonumnumimaginario);
+        return new Ex3(novonumnumreal,novonumnumimaginario);
 
 	}
 
-	public NumerosComplexos Divisao(NumerosComplexos outro) {
+	public Ex3 Divisao(Ex3 outro) {
 		
 			double denominador = outro.numreal * outro.numreal
                            + outro.numimaginario * outro.numimaginario;
@@ -72,20 +72,20 @@ public class NumerosComplexos {
                                - this.numreal * outro.numimaginario)
                                / denominador;
 
-        return new NumerosComplexos(novonumreal, novonumimaginario);
+        return new Ex3(novonumreal, novonumimaginario);
 
 	}
-	@Override
+	
     public boolean equals(Object objeto) {
         if (this == objeto) {
             return true;
         }
 
-        if (!(objeto instanceof NumerosComplexos)) {
+        if (!(objeto instanceof Ex3)) {
             return false;
         }
 
-        NumerosComplexos outro = (NumerosComplexos) objeto;
+        Ex3 outro = (Ex3) objeto;
 
         return Double.compare(this.numreal, outro.numreal) == 0
             && Double.compare(
@@ -93,7 +93,7 @@ public class NumerosComplexos {
             ) == 0;
     }
 
-    @Override
+  
     public int hashCode() {
         int resultado = Double.hashCode(numreal);
         resultado = 31 * resultado
@@ -101,8 +101,6 @@ public class NumerosComplexos {
         return resultado;
     }
 
-    // h) Representação em string
-    @Override
     public String toString() {
         if (numimaginario < 0) {
             return numreal + " - " + (-numimaginario) + "i";
@@ -111,11 +109,10 @@ public class NumerosComplexos {
         return numreal + " + " + numimaginario + "i";
     }
 
-    // i) Módulo
+    
     public double modulo() {
         return Math.sqrt(
-            numreal * numreal + numimaginario * numimaginario
-        );
+            numreal * numreal + numimaginario * numimaginario);
     }
 
 }

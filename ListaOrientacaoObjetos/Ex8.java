@@ -1,10 +1,10 @@
-public class Pais {
+public class Ex8 {
 
     private String nome;
     private long populacao;
     private double dimensao;
 
-    public Pais(String nome, long populacao, double dimensao){
+    public Ex8(String nome, long populacao, double dimensao){
         this.nome = nome;
         this.populacao = populacao;
         this.dimensao = dimensao;
@@ -25,12 +25,12 @@ public class Pais {
     public class Continente{
 
         private String nome;
-        private Pais[] paises;
+        private Ex8[] paises;
         private int quantidade;
 
         public Continente(String nome){
             this.nome = nome;
-            this.paises = new Pais[48];
+            this.paises = new Ex8[48];
             this.quantidade = 0;
         }
 
@@ -38,7 +38,7 @@ public class Pais {
             return nome;
         }
 
-        public boolean adicionarPais(Pais pais){
+        public boolean adicionarPais(Ex8 pais){
             if (quantidade < 48 && pais != null){
 
                 paises[quantidade] = pais;
@@ -75,12 +75,12 @@ public class Pais {
 return(double) getPopulacaoTotal() / dimensao;
         }
 
-        public Pais getPaisMaiorPopulacao(){
+        public Ex8 getPaisMaiorPopulacao(){
             if(quantidade == 0) {
                 return null;
             }
 
-            Pais maior = paises[0];
+            Ex8 maior = paises[0];
 
             for(int i = 1; i < quantidade; i++){
                 if (paises[i].getPopulacao() > maior.getPopulacao()){
@@ -91,13 +91,13 @@ return(double) getPopulacaoTotal() / dimensao;
             return maior;
         }
 
-        public Pais getPaisMenorPopulacao(){
+        public Ex8 getPaisMenorPopulacao(){
 
             if (quantidade == 0){
                 return null;
             }
 
-            Pais menor = paises[0];
+            Ex8 menor = paises[0];
 
             for(int i = 1; i < quantidade; i++){
                 if (paises[i].getPopulacao() < menor.getPopulacao()){
@@ -108,12 +108,12 @@ return(double) getPopulacaoTotal() / dimensao;
             return menor;
         }
 
-        public Pais getPaisMaiorDimensao(){
+        public Ex8 getPaisMaiorDimensao(){
             if (quantidade == 0){
                 return null;
             }
 
-            Pais maior = paises[0];
+            Ex8 maior = paises[0];
 
             for (int i = 1; i < quantidade; i++){
                 if (paises[i].getDimensao() > maior.getDimensao()){
@@ -123,12 +123,12 @@ return(double) getPopulacaoTotal() / dimensao;
             return maior;
         }
         
-        public Pais getPaisMenorDimensao(){
+        public Ex8  getPaisMenorDimensao(){
             if (quantidade == 0){
                 return null;
             }
 
-            Pais menor = paises[0];
+            Ex8 menor = paises[0];
 
             for (int i = 1; i < quantidade; i++){
                 if (paises[i].getDimensao() < menor.getDimensao()){
@@ -140,8 +140,8 @@ return(double) getPopulacaoTotal() / dimensao;
 
         public double getRazaoTerritorial(){
 
-            Pais maior = getPaisMaiorDimensao();
-            Pais menor = getPaisMenorDimensao();
+            Ex8 maior = getPaisMaiorDimensao();
+            Ex8 menor = getPaisMenorDimensao();
 
             if (maior == null || menor == null || menor.getDimensao() == 0){
                 return 0;

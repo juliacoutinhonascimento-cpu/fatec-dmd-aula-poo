@@ -1,9 +1,9 @@
-public class Conjunto {
+public class Ex10 {
 
     private String[] elementos;
     private int quantidade;
 
-    public Conjunto() {
+    public Ex10() {
         elementos = new String[2];
         quantidade = 0;
     }
@@ -44,8 +44,8 @@ public class Conjunto {
     }
 
     
-    public Conjunto uniao(Conjunto outro) {
-        Conjunto resultado = new Conjunto();
+    public Ex10 uniao(Ex10 outro) {
+        Ex10 resultado = new Ex10();
 
         for (int i = 0; i < quantidade; i++) {
             resultado.adicionar(elementos[i]);
@@ -59,8 +59,8 @@ public class Conjunto {
     }
 
     
-    public Conjunto inter(Conjunto outro) {
-        Conjunto resultado = new Conjunto();
+    public Ex10 inter(Ex10 outro) {
+        Ex10 resultado = new Ex10();
 
         for (int i = 0; i < quantidade; i++) {
             if (outro.pertence(elementos[i])) {
@@ -72,8 +72,8 @@ public class Conjunto {
     }
 
     // Retorna os elementos deste conjunto que nao estao no outro
-    public Conjunto menos(Conjunto outro) {
-        Conjunto resultado = new Conjunto();
+    public Ex10 menos(Ex10 outro) {
+        Ex10 resultado = new Ex10();
 
         for (int i = 0; i < quantidade; i++) {
             if (!outro.pertence(elementos[i])) {
