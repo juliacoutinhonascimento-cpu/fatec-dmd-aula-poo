@@ -34,6 +34,10 @@ public class Pais {
             this.quantidade = 0;
         }
 
+        public String getNome(){
+            return nome;
+        }
+
         public boolean adicionarPais(Pais pais){
             if (quantidade < 48 && pais != null){
 
