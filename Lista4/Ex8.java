@@ -23,3 +23,4 @@ public class Ex8 {
         System.out.println(count);
         scan.close();
 }
+
