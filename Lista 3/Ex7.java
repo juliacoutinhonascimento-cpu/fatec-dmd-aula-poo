@@ -1,5 +1,5 @@
  import java.util.Scanner;
-public class LacosEx7 {
+public class Ex7 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int posistivos = 0;
